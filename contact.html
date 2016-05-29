@@ -1,0 +1,140 @@
+<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Contact</title>
+   <style>
+  a{color:black;
+  font-size:18;}
+  a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+nav a {
+    padding: 50px;
+}
+h2 span { 
+   color: white; 
+   font: bold 24px/45px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); 
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+}
+#div {  	
+    width: 940px;
+    padding: 50px;
+    border: 5px;
+	border-color:RGB(42, 20, 14);
+	border-style: dotted;
+    margin: 110px;
+	margin-top:30px;
+}
+.btn {
+  
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 18px;
+  font-family: Georgia;
+  background-color: #693a1a;
+  font-size: 12px;
+  padding: 10px 20px 10px 20px;
+  color: #ffffff;
+}
+.a { 
+ color: white;
+}
+.p{
+color: red;
+}
+  </style>
+  <script language="javascript">
+  function validate()
+  {
+  var nameVal= document.getElementById('name');
+  var phoneVal= document.getElementById('phone');
+  var emailVal= document.getElementById('txtEmail');
+   var phoneno = /^\d{10}$/;
+   var emailCheck = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  if(!nameVal.value|| !phoneVal.value|| !emailVal.value || !message.value)
+  {
+   document.getElementById('error').innerHTML='Please fill in missing fields';
+  return false;
+  }
+  if(!phoneVal.value.match(phoneno))
+  {
+  document.getElementById('error').innerHTML="Not a valid Phone Number";
+   return false;
+  }
+   if(!emailVal.value.match(emailCheck))
+   {
+   document.getElementById('error').innerHTML= 'Please provide a valid email address <br>';
+   return false;
+   }
+  }   
+
+</script>
+</head>
+   
+<body background="background_beans.jpg">
+<div>
+     <header>
+        <div>
+		<br>
+            <h2 align="center">
+               <span> COFFEE SHOP </span>
+            </h2>
+			<br>
+            <nav align="center" background-color="white">
+                <nav><a href="../bharath/home.html" color="black">Home</a> 	|	 <a href="../bharath/menu.html">Menu</a> 	|	 <a href="../bharath/about.html">About</a> 	|	 <a href="../bharath/contact.html"class="a">Contact</a>|<a href="../bharath/specials.html">Specials</a></nav>
+            </nav>
+        </div>
+    </header>
+	 
+           <div id="div">
+           <img src="ContactUsOrangeCrop.jpg" height="110" width="600" style="padding-left:160px; padding-bottom:20px;"/>
+            <div>
+                <form align="center" method="post" action="mailto:gelivibharath@gmail.com">
+                                    <div>NAME: <input type="text" id="name"> PHONE: <input type="text" id="phone"></div><br>
+                                 
+                                    <div>E-MAIL: <input type="text" id="txtEmail"> MESSAGE: <textarea id="message"></textarea><p id="error" class="p"></p></div>
+                                   
+                                    <br>
+									<div><input type="submit" value="Submit" class="btn"  onclick="Javascript:validate(); return false;"></div>
+                                    
+                </form>
+            </div>
+			<hr color="black">
+            <div>
+                <div>
+                    <div>
+                        <div style="text-align: center;">ADDRESS</div>
+                        <div style="text-align: center;">Rectory, 323 East</div>
+                        <div style="text-align: center;">61st Street,New York</div>
+                        <div style="text-align: center;"> <br></div>
+                        <div style="text-align: center;">TEL</div>
+                        <div style="text-align: center;">0444-846266</div>
+                        <div style="text-align: center;"> <br></div>
+                        <div style="text-align: center;">E-MAIL</div>
+                        <div style="text-align: center;">coffee@shop.com</div>
+                        <div style="text-align: center;"> <br></div>
+                        <div>
+                            <div style="text-align: center;">OPENING HOURS</div>
+                            <div style="text-align: center;">Monday to Friday 8:00-19:00</div>
+                            <div style="text-align: center;">Saturday and Sunday 9:00-15:00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div></body>
+</html>
